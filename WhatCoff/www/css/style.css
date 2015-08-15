@@ -13,9 +13,9 @@
 
 .coffeetext
 {
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 3em;
+    font-family: 'League Gothic', sans-serif;
+    font-weight: normal;
+    font-size: 4em;
     color: white;
     
     position: fixed;

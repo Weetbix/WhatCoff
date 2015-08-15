@@ -4,14 +4,11 @@ var icons = [
     "icon-hot",
     "icon-hot-1",
     "icon-cup",
-    "icon-coffee-2",
     "icon-coffee-3",
     "icon-cup-1",
     "icon-coffee-4",
-    "icon-banes",
     "icon-coffee-5",
     "icon-cup-2",
-    "icon-hot-2",
     "icon-hot-3",
     "icon-coffee-6",
     "icon-black",
@@ -28,17 +25,25 @@ var icons = [
 ];
 
 var coffs = [
+    "Latte",
     "Flat White",
+    "Cappuccino",
     "Long Mac",
-    "Cap"
+    "Traditional Mac",
+    "Long Mac Topped Up",
+    "Mocha",
+    "Espresso",
+    "Double Espresso",
+    "Long Black",
+    "Short Black",
+    "Americano",
+    "Ristretto",
 ];
 
 angular.module('whatcoff', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -59,7 +64,7 @@ var changeBackground = function()
     var pattern = Trianglify({
             height: window.innerHeight,
             width: window.innerWidth,
-            cell_size: 40});
+            cell_size: 60});
     
     $("#background-pattern").html(pattern.canvas());
 }
