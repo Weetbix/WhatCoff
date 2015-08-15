@@ -36,50 +36,59 @@ var coffs = [
     "Double Espresso",
     "Long Black",
     "Short Black",
-    "Americano",
     "Ristretto",
 ];
 
 angular.module('whatcoff', ['ionic'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-    
-    changeBackground();
-  });
+.run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+        }
+
+        document.addEventListener("resume", function () {
+           reset();
+        }, false);
+
+        changeBackground();
+    });
 })
 
-$(document).click(function(){
+$(document).click(function () {
     generateCoff();
 });
 
-var changeBackground = function()
-{    
+var changeBackground = function () {
     var pattern = Trianglify({
-            height: window.innerHeight,
-            width: window.innerWidth,
-            cell_size: 60});
-    
-    $("#background-pattern").html(pattern.canvas());
+        height: window.innerHeight,
+        width: window.innerWidth,
+        cell_size: 60
+    });
+
+    $(".background-pattern").html(pattern.canvas());
 }
 
-var generateCoff = function()
-{
+var generateCoff = function () {
     changeBackground();
 
     var coff = coffs[Math.floor(Math.random() * coffs.length)];
     var icon = icons[Math.floor(Math.random() * icons.length)];
-    
+
     $(".coffeetext").replaceWith(
         $("<span>").addClass("coffeetext animated bounceIn").text(coff));
-    
+
     $(".coffeeicon").replaceWith(
         $("<i>").addClass(icon + " coffeeicon animated bounceInDown"));
-    
+
+}
+
+var reset = function()
+{
+    $(".coffeeicon").replaceWith("<i class=\"coffeeicon\">?</i>");
+    $(".coffeetext").replaceWith(
+        $("<span>").addClass("coffeetext animated bounceIn").text("What Coff?"));
 }
