@@ -1,0 +1,63 @@
+.circle
+{
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    margin-top: 50px;
+    
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+    
+}
+
+.circle > span,
+body > span 
+{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+}
+
+body > span
+{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    display: block;
+    
+    margin-top: 50px;
+    height: 2em;
+}
+
+.circle > span
+{
+    display: block;
+    font-size: 10em;
+}
+
+.circle > i
+{
+    color:white;
+    font-size: 10em;
+}
+
+#background-pattern
+{
+    position: fixed;
+    top:0;
+    z-index: -1;
+}
+
+/* Text drop shadows */
+.circle > i,
+body > span
+{
+    text-shadow: 3px 3px 5px #888;   
+}
