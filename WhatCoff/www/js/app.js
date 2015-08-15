@@ -45,27 +45,17 @@ angular.module('whatcoff', ['ionic'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-      
-
+    
     changeBackground();
   });
 })
-
-$(document).ready(function () {
-
-    //changeBackground();
-
-});
 
 $(document).click(function(){
     generateCoff();
 });
 
 var changeBackground = function()
-{
-    //$(document.body).css({backgroundColor: Please.make_color()});
-    //$(".circle").css({backgroundColor: Please.make_color()});
-    
+{    
     var pattern = Trianglify({
             height: window.innerHeight,
             width: window.innerWidth,
@@ -85,6 +75,6 @@ var generateCoff = function()
         $("<span>").addClass("coffeetext animated bounceIn").text(coff));
     
     $(".coffeeicon").replaceWith(
-        $("<i>").addClass(icon + " coffeeicon animated bounceIn"));
+        $("<i>").addClass(icon + " coffeeicon animated bounceInDown"));
     
 }

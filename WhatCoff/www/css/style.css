@@ -1,11 +1,9 @@
 .iconcontainer
-{
-    width: 250px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    margin-top: 50px;
+{    
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
     /* Center the icon */
     display: flex;
@@ -20,12 +18,11 @@
     font-size: 3em;
     color: white;
     
-    margin-left:auto;
-    margin-right:auto;
+    position: fixed;
+    top: 80%;
+    
+    width: 100%;
     text-align: center;
-    display: block;
-
-    margin-top: 50px;
     height: 2em;
 }
 
