@@ -1,48 +1,35 @@
-.circle
+.iconcontainer
 {
-    background-color: transparent;
     width: 250px;
     height: 250px;
-    border-radius: 100px;
     margin-left: auto;
     margin-right: auto;
     
-    
     margin-top: 50px;
     
+    /* Center the icon */
     display: flex;
-    justify-content: center; /* align horizontal */
+    justify-content: center;
     align-items: center;
-    
 }
 
-.circle > span,
-body > span 
+.coffeetext
 {
     font-family: sans-serif;
     font-weight: bold;
     font-size: 3em;
     color: white;
-}
-
-body > span
-{
+    
     margin-left:auto;
     margin-right:auto;
     text-align: center;
     display: block;
-    
+
     margin-top: 50px;
     height: 2em;
 }
 
-.circle > span
-{
-    display: block;
-    font-size: 10em;
-}
-
-.circle > i
+.coffeeicon
 {
     color:white;
     font-size: 10em;
@@ -56,7 +43,7 @@ body > span
 }
 
 /* Text drop shadows */
-.circle > i,
+.coffeeicon,
 body > span
 {
     text-shadow: 3px 3px 5px #888;   
