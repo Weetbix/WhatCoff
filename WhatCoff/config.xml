@@ -18,6 +18,9 @@
   <preference name="SplashScreenDelay" value="3000"/>
   <preference name="Orientation" value="portrait" />
   <preference name="KeepRunning" value="false"/>
+  <!-- Sometimes, when running in the android emulator the app can 
+       timeout when fetching index.html. This fixes that. -->
+  <preference name="LoadUrlTimeoutValue" value="50000" />
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

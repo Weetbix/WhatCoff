@@ -3,10 +3,16 @@
     position: fixed;
     top: 40%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     
     /* Center the icon */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    
     justify-content: center;
     align-items: center;
 }
