@@ -1,7 +1,7 @@
 # WhatCoff
 >What coffee should I order?
 
-What Coff is a small proof of concept HTML5 application using Ionic & Cordova.
+What Coff is a small proof of concept HTML5 mobile application using Ionic & Cordova.
 
 Tapping the screen selects a random coffee for you to order, complete with fancy animations.
 
